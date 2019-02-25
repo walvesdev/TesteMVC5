@@ -1,0 +1,27 @@
+﻿@model ProjetoBase.Models.Aluno
+@{
+    ViewBag.Title = "Inserir";
+}
+
+<h2>Inserir</h2>
+
+@using (Html.BeginForm())
+    {
+        @Html.LabelFor(a => a.Nome)<br />
+        @Html.EditorFor(a  => a.Nome)<br />
+
+        @Html.LabelFor(a => a.Idade)<br />
+        @Html.EditorFor(a => a.Idade)<br />
+        @*@Html.ValidationMessageFor(a => a.Idade)<br />*@
+
+       <input type="submit" name="inserir" value="Inserir" />
+       @Html.ValidationSummary("Resumo dos erros encontrados:")
+    }
+
+@*@using (Html.BeginForm())
+{
+    @Html.EditorForModel()
+    <input type="submit" name="inserir" value="Inserir" />
+
+}*@
+

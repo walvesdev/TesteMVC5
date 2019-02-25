@@ -1,0 +1,31 @@
+﻿@model ProjetoBase.Models.Aluno
+
+@{
+    ViewBag.Title = "InserirAjax";
+}
+
+<h2>InserirAjax</h2>
+
+@using (Ajax.BeginForm("InserirAlunoAjax", new AjaxOptions()
+{
+    InsertionMode = InsertionMode.Replace,
+    UpdateTargetId = "divAjax",
+    LoadingElementId = "progress"
+}))
+{
+    @Html.LabelFor(a => a.Nome)<br />
+    @Html.EditorFor(a => a.Nome)<br />
+
+    @Html.LabelFor(a => a.Idade)<br />
+    @Html.EditorFor(a => a.Idade)<br />
+    @*@Html.ValidationMessageFor(a => a.Idade)<br />*@
+
+    <input type="submit" name="inserir" value="Inserir" />
+    @Html.ValidationSummary("Resumo dos erros encontrados:")
+
+    <div id="progress">
+        <img src="~/Content/img/ajax-loader.gif" />
+    </div>
+    <div id="divAjax"></div>
+}
+

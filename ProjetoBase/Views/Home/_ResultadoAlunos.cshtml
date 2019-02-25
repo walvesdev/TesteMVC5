@@ -1,0 +1,19 @@
+﻿@using ProjetoBase.Models;
+@model List<Aluno>
+
+<h2>ListarAlunos Partial</h2>
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+
+    @foreach (var aluno in Model)
+    {
+        <tr>
+            <td>@aluno.Nome</td>
+            <td>@aluno.Idade</td>
+        </tr>
+    }
+</table>
