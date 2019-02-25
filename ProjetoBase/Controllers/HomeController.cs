@@ -88,7 +88,14 @@ namespace ProjetoBase.Controllers
             Thread.Sleep(2000);
             return PartialView("_ResultadoInsercaoAjax",aluno);
         }
+        public ActionResult RetornarDados()
+        {
+            ViewData["nomeCurso"]= "ASP.NET MVC"; //ciclo de vida: uma requisição
+            TempData["nomeCurso"]= "ASP.NET MVC"; //ciclo de vida: duas requisição
+            ViewBag.nomeCurso = "ASP.NET MVC"; //ciclo de vida: atribuido dinamicamente
 
+            return View();
+        }
 
 
 

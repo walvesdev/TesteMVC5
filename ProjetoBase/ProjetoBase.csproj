@@ -173,6 +173,7 @@
     <Content Include="Views\Home\_ResultadoAlunos.cshtml" />
     <Content Include="Views\Home\InserirAjax.cshtml" />
     <Content Include="Views\Home\_ResultadoInsercaoAjax.cshtml" />
+    <Content Include="Views\Home\RetornarDados.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
